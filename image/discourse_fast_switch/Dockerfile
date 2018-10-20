@@ -14,5 +14,5 @@ RUN apt-get -y install ruby bison autoconf &&\
 
 RUN cd / && rm -rf /src/ruby-build && ruby-build 2.3.1 /usr/ruby_23
 
-ADD create_switch.rb /src/create_switch.rb
+COPY create_switch.rb /src/create_switch.rb
 RUN ruby /src/create_switch.rb
