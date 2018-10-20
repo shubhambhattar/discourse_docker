@@ -27,7 +27,7 @@ RUN /etc/init.d/postgresql start &&\
     sleep 5 &&\
     sudo -u postgres createuser --superuser discourse
 
-ADD run_bench.sh /tmp/run_bench.sh
+COPY run_bench.sh /tmp/run_bench.sh
 RUN chmod +x /tmp/run_bench.sh
 
 ENTRYPOINT ["/tmp/run_bench.sh"]
